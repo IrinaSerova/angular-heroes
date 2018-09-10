@@ -1,0 +1,26 @@
+nav {
+    color: rgb(51, 51, 51);
+    
+
+ 
+}
+li {
+    font-weight: 700;
+    text-transform: uppercase;
+    list-style: none;
+    margin-left: auto;
+    margin-right: auto
+
+}
+a {
+    text-decoration: none;
+    color: rgb(51, 51, 51);
+}
+ul {
+    /*display: inline-flex;*/
+    display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+   
+}

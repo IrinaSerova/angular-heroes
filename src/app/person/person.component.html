@@ -1,1 +1,22 @@
-<h1>Person</h1>
+
+<div>
+  <ul>
+  <li class="first">
+    <label class="hide" for="who">e.g. Jon Snow</label>
+    <input type="text" name="who" id="who" autocomplete="off" autocorrect="off"
+    spellcheck="false" placeholder="e.g. Jon Snow" data-required="Last Name (Required)"
+    data-gaevent="search_box" data-gaaction="people_name" data-galabel="focus" />
+  </li>
+  <li>
+    <label class="hide" for="where">City, State or ZIP</label>
+    <input type="text" name="where" id="where" autocomplete="off" autocorrect="off" 
+    spellcheck="false" placeholder="City, State or ZIP" maxlength="100" 
+    class="city-typeahead location-field has-expandable-btn" data-location-display="city-state"
+    data-gaevent="search_box" data-gaaction="people_location" data-galabel="focus" />
+   </li>
+         <button type="submit" class="new-search" data-gaevent="person" data-gaaction="search" data-galabel="click" data-ampevent="WPClickedSearch" data-searchtype="person"><img height="32px" width="32px" src="/assets/images/search.svg"></button>
+
+</ul>
+</div>
+
+
