@@ -2,9 +2,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { ReversePhoneService } from './reverse-phone.service';
+import { routes } from './app.router';
 
 import { NavComponent } from './nav/nav.component';
 import { PersonComponent } from './person/person.component';
+import { AddressComponent } from './address/address.component';
+import { BusinessComponent } from './business/business.component';
+import { PhoneComponent } from './phone/phone.component';
 
 import { AppComponent } from './app.component';
 
@@ -12,11 +16,15 @@ import { AppComponent } from './app.component';
   declarations: [
     AppComponent,
     NavComponent,
-    PersonComponent
+    PersonComponent,
+    BusinessComponent,
+    PhoneComponent,
+    AddressComponent,
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    routes
   ],
   providers: [ReversePhoneService],
   bootstrap: [AppComponent]

@@ -3,8 +3,10 @@ import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { PersonComponent } from './person/person.component';
-import { TellerComponent } from './phone/phone.component';
+import { PhoneComponent } from './phone/phone.component';
 import { AddressComponent } from './address/address.component';
+import { BusinessComponent } from './business/business.component';
+
 
 export const router: Routes = [
   { path: '', redirectTo: 'phone', pathMatch: 'full' },
