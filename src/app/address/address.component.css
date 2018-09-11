@@ -63,3 +63,25 @@ input[_ngcontent-c2] {
 .first {
     border-right: 1px solid #c5c5c5;
 }
+h2 {
+    font-size: 48px;
+    font-weight: 400;
+    text-align: center;
+}
+h2 strong {
+    font-weight: 700;
+}
+.firstLiOutput {
+    flex: 10%;
+    
+    
+}
+.secondLiOutput {
+    flex: 90%;
+    font-size: 32px;
+    font-weight: 700;
+    
+}
+/*.zipOutput {*/
+/*    flex-direction: column;*/
+/*}*/

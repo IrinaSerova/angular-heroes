@@ -3,18 +3,29 @@
     <ul class="first">
     <li class="half-width first search-selected">
       <label class="hide" for="street">e.g. 1600 Pennsylvania Ave NW</label>
-      <input type="text" name="street" id="street" autocomplete="off" autocorrect="off" spellcheck="false" placeholder="e.g. 1600 Pennsylvania Ave NW" data-required="Address (Required)" data-gaevent="search_box" data-gaaction="address" data-galabel="focus">
+      <input  [(ngModel)]="addressInput"  type="text" name="street" id="street" autocomplete="off" autocorrect="off" spellcheck="false" placeholder="e.g. 1600 Pennsylvania Ave NW" data-required="Address (Required)" data-gaevent="search_box" data-gaaction="address" data-galabel="focus">
     </li>
     <li>
       <span class="locator-icon locater"></span>
       <label class="hide" for="where">City, State or ZIP</label>
-      <input type="text" name="where" id="where" autocomplete="off" autocorrect="off" spellcheck="false" placeholder="City, State or ZIP" data-required="City, State or ZIP (Required)" data-gaevent="search_box" data-gaaction="address_location" data-galabel="focus" maxlength="100" class="city-typeahead location-field has-expandable-btn" data-location-display="city-state">
+      <input [(ngModel)]="zipInput" type="text" name="where" id="where" autocomplete="off" autocorrect="off" spellcheck="false" placeholder="City, State or ZIP" data-required="City, State or ZIP (Required)" data-gaevent="search_box" data-gaaction="address_location" data-galabel="focus" maxlength="100" class="city-typeahead location-field has-expandable-btn" data-location-display="city-state">
     </li>
-    <button type="submit" class="new-search" data-gaevent="address" 
+    <button (click)="changeShow()" type="submit" class="new-search" data-gaevent="address" 
     data-gaaction="search" data-galabel="click" data-ampevent="WPClickedSearch" 
     data-pathname="/home" data-searchtype="address"><img height="32px" width="32px"
     src="/assets/images/search.svg"></button>
   </ul>
  </div>
+ 
+<div *ngIf="isShow">
+    <ul class="addressOutput">
+    <li class="firstLiOutput"><img src="/assets/images/addressIcon.svg"></li>
+      <li class="secondLiOutput">   {{ addressInput }}</li>  
+      <li class="zipOutput">{{ zipInput }}</li>
+     
+    </ul>
+</div>
+<h2 *ngIf="!isShow" class="address_railcar in" style="display: block;">Find out who lives there with 
+<strong>reverse address lookup</strong></h2>
   
   

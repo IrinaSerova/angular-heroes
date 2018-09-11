@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
     selector: 'app-address',
@@ -8,10 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class AddressComponent implements OnInit{
-    
+    @Input() addressInput: string;
     constructor(){
         
     }
+    isShow: boolean  = false;
+  changeShow(){
+  this.isShow =  !this.isShow 
+  
+}
     ngOnInit(){
         
     }
