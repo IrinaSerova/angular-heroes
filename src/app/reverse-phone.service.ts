@@ -11,6 +11,12 @@ url: string = "https://proapi.whitepages.com/3.1/location_intel?api_key=d044457c
   constructor(private http: HttpClient) { }
   getData (){
     return this.http.get(this.url)
+    console.log(`${this.addressInput}`)
   }
+//   getAddressRecord(addressInput){
+//   console.log(`${this.addressInput}`)
+//   return this._http.get(
+//   `${this.url}${addressInput}`)
+// }   
 
 }

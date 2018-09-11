@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import{ ReversePhoneService} from "../reverse-phone.service";
 
 @Component({
     selector: 'app-address',
@@ -8,6 +9,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 
 export class AddressComponent implements OnInit{
+    
+    
     @Input() addressInput: string;
     constructor(){
         
@@ -15,6 +18,12 @@ export class AddressComponent implements OnInit{
     isShow: boolean  = false;
   changeShow(){
   this.isShow =  !this.isShow 
+ 
+    this._user.getdata(this.addressInput)
+       .subscribe( res => {
+         this.results = res
+       
+  }
   
 }
     ngOnInit(){

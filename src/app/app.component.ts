@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ReversePhoneService } from './reverse-phone.service';
+import{ UserService} from "./user.service";
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,7 @@ import { ReversePhoneService } from './reverse-phone.service';
 })
 export class AppComponent {
   title = 'whitepages';
+  lat_long;
   current_addresses;
   historical_addresses;
   associated_people;
@@ -21,6 +23,8 @@ export class AppComponent {
     this._config.getData()
      .subscribe((res: any) => {
        console.log(res)
+       this.lat_long = res.lat_long;
+       console.log(this.lat_long.latitude + "LATLONG");
        this.current_addresses = res.current_addresses;
        this.historical_addresses = res.historical_addresses;
        this.associated_people = res.associated_people;
